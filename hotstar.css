@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: #0c111b;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Bar */
+
+.navebar {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 4%;
+    background: #0c111b;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    height: 70px;
+}
+
+.nav-links {
+    margin-top: 10px;
+    display: flex;
+    /* margin-left: 20px; */
+    list-style: none;
+}
+
+.nav-items a {
+    text-decoration: none;
+    margin-left: 20px;
+    /* padding-left: 20px; */
+    text-transform: capitalize;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.right-container {
+    display: flex;
+    margin-left: auto;
+}
+
+.search-box {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #fff;
+    width: 250px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.search-box:focus {
+    width: 400px;
+    /* border-color: #1f80e0; */
+}
+
+.sub-btn {
+    background-color: #1f80e0;
+    height: 30px;
+    padding: 0 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.sub-btn:hover {
+    scale: 1.02;
+    background-color: #509eeb;
+}
+
+.login-link {
+    margin-left: 5px;
+    margin-top: 5px;
+    color: #fff;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Navigation bar end */
+
+
+
+/* Carousel */
+
+.carousel-container {
+    /* position: relative; */
+    width: 100%;
+    max-width: 100%;
+    height: 450px;
+    padding: 20px 0;
+    overflow-x: hidden;
+    margin-top: 80px;
+}
+
+.carousel {
+    display: flex;
+    width: 92%;
+    height: 100%;
+    /* position: relative; */
+    margin: auto;
+    object-fit: cover;
+}
+
+.slider {
+    display: flex;
+    /* margin-right: auto; */
+    flex: 0 0 auto;
+    margin-right: 30px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 100%;
+    left: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 70%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+}
+
+.slider-content {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #030b17 80%, #0c111b00);
+    color: #fff;
+}
+
+.movie-title {
+    padding-left: 50px;
+    text-transform: capitalize;
+    margin-top: 80px;
+}
+
+.movie-des {
+    width: 80%;
+    line-height: 30px;
+    padding-left: 50px;
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+/* Carousel end */
+
+
+
+/* video-card */
+
+.video-card-container {
+    position: relative;
+
+    width: 92%;
+    margin: auto;
+    /* background-color:#fff ; */
+    height: 10vw;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+}
+
+.video-card {
+    width: 19.5%;
+    height: 100%;
+
+    background-color: #030b17;
+    border-radius: 5px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.video-card-image,
+.card-video {
+    width: 100%;
+    height: 100%;
+}
+.card-video{
+    position: absolute;
+    /* since .card-video is position:relative that's why here we have to do 'absolute'. Same in card section*/
+}
+
+/* .card-video{
+    width: 100%;
+    height: 100%;
+} */
+
+/* Important */
+
+/* If a parent element has two child element and both child is given 100% width and height wrt parent then 2nd element will overflow. Overcome this overflow use 'overflow:hidden;' in parent element.*/
+
+/*if 1st element is given 'display:none' then 2nd element can be seen*/
+
+
+.video-card:hover .video-card-image {
+    display: none;
+}
+
+/* video-card end*/
+
+
+/* Card slider */
+
+.title{
+    color:#fff ;
+    opacity: 0.9;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 4%;
+}
+
+.movies-list{
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 10px 0 20px;
+    /* background-color: red; */
+}
+
+.card-container{
+    position: relative;
+    width: 92%;
+    /* padding-left: 4%; */
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    /* justify-content: space-between; */
+
+    /* background-color: antiquewhite; */
+}
+
+.card-container::-webkit-scrollbar{
+    display: none;
+}
+
+.card{
+    position: relative;
+    min-width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+    transition: 0.5s;
+    background-color: #030b17;
+
+}
+
+.card:hover{
+    scale: 1.1;
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.card-body{
+    opacity: 0;
+    position: absolute;
+    /* 2 child in a parent. Parent given relative and 2nd child given absolute. */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index:2;
+    background: linear-gradient(to bottom, rgba(4,8,15,0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.card:hover .card-body{
+    opacity: 1;
+}
+
+.name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 60%;
+}
+
+.des{
+    color: #fff;
+    opacity: 0.8;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.watchlist-btn{
+    position: relative;
+    width: 100%;
+    text-transform: capitalize;
+    background: none;
+    border: none;
+    font-weight: 500;
+    text-align: right;
+    color: rgba(255,255,255,0.5);
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.watchlist-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px;
+    height: 35px;
+    width: 35px;
+    background-image: url(images/add.png);
+    background-size: cover;
+    transform: scale(0.4);
+}
+
+.watchlist-btn:hover{
+    color: #fff;
+    /* background-color: rgba(255,255,255,0.5); */
+}
+
+.pre-btn,
+.nxt-btn{
+    position: absolute;
+    top: 0;
+    width: 4%;
+    height: 100%;
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+}
+
+.pre-btn{
+    left: 0;
+    background: linear-gradient(to right, #0c111b 0%, #0c111b);
+}
+
+.nxt-btn{
+    right: 0;
+    background: linear-gradient(to right, #0c111b 0%, #0c111b);
+}
+
+.pre-btn img,
+.nxt-btn img{
+    width: 15px;
+    height: 20px;
+    opacity: 0;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img{
+    opacity: 1;
+}
+
+#footer{
+    position: relative;
+    width: 92%;
+    /* height: 200px; */
+    min-height: 200px;
+    /* background-color: aqua; */
+    margin: 100px auto 0;
+}
+
+.footer-upper{
+    position: relative;
+    /* height: 60%;
+    min-height: 60%; */
+    width: 100%;
+    /* background-color: #192133; */
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.content-box{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    /* background-color: #a2a7ae; */
+    margin-right: 45px;
+    
+}
+
+.contact-box{
+    width: 160px;
+    height: 100%;
+    position: relative;
+}
+
+.box-heading{
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.8;
+    color: #fff;
+    /* text-transform: capitalize; */
+}
+
+.box-list{
+    margin: 15px 0;
+    line-height: 2;
+    list-style: none;
+    color: #39597a;
+}
+
+.contact-icons{
+    margin-right: 30px;
+}
+.footer-lower{
+    position: relative;
+    margin: 40px 0 20px;
+    /* height: 40%; */
+    /* background-color: #40454e; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright-content{
+    color: #39597a;
+    /* background-color: antiquewhite; */
+}
+
+.other-list{
+    margin: 15px 0;
+    /* line-height: 2; */
+    list-style: none;
+    color: #39597a;
+    display: flex;
+}
+
+.other-list-item{
+    margin-right: 15px;
+}
+
+.box-items:hover, i:hover, .other-list-item:hover{
+    cursor: pointer;
+}
+
+.downloads{
+
+}
+
+
+
+
+
